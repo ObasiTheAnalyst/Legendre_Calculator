@@ -1,0 +1,377 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Solution</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link href="font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="unique.css">
+  <script id="Mathjax-js" sync src="tex-chtml-full.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="plotly.js-dist-min/plotly.min.js"></script>
+  <script src="math.js"></script>
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="display-1" id="not">
+    <div class="spinner-border" role="status">
+      <span class="sr-only text-center" style="font-size: 1000px;"></span>
+      <br><br><br>
+    </div>
+    <div style="font-size: 20px;">Loading</div>
+  </div>
+
+  <div id="load">
+    <div>
+      <nav class="navbar flex-column fixed-top navbar-expand-md rounded border pt-0.5 pb-0.5 navbar-dark bgcon">
+        <div class="container-lg">
+          <!-- navbar brand / title -->
+          <a class="navbar-brand" href="index.html">
+            <span class="text-secondary fw-bold motion1" id="intro11">
+              <i class="bi bi-calculator"></i>
+              UltimateCalc
+            </span>
+          </a>
+          <!-- toggle button for mobile nav -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" role="button" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-three-dots-vertical textpop px-3 py-1" style="font-size: 20px; background: black; border-radius: 30%;"></span>
+          </button>
+  
+          <!-- navbar links-->
+          <div class="collapse navbar-collapse justify-content-end" id="main-nav" role="navigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link textpep px-3" id="test" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link textpep px-3" href="#" id="dpdf">Download Solution</a>
+              </li>
+              <li class="nav-item">
+                <button style="background: transparent; border:none;" id="rate" data-bs-toggle="modal" data-bs-target="#reg-modal"><a class="nav-link textpep px-3" href="#"> Rate us</a></button>
+              </li>
+              <ul style="display: flex; justify-content: space-around; font-size: 25px;" id="icons1">
+                <li class="p-2 nav-link"><a href="https://www.linkedin.com/in/innocent-obasi-72ab6022a" target="_blank" class="bi bi-linkedin"></a></li>
+                <li class="p-2 nav-link"><a href="https://www.facebook.com/obasi.chukwuma.77" target="_blank" class="bi bi-facebook"></a></li>
+                <li class="p-2 nav-link"><a href="https://wa.link/fjkcmd" target="_blank" class="bi bi-whatsapp"></a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+  
+              
+        <div class="my-2 col-g-8 align-items-center table-responsive justify-content-lg-center container-lg stytab">
+          <div id="nav-tab" style="min-width: 40rem;" role="tablist" >
+            <ul class="nav nav-pills justify-content-around">
+              <li class="nav-item px-3 note1"><buton class="nav-link active textpep" id="nav-solution-tab" data-bs-toggle="tab" data-bs-target="#nav-solution" type="button"
+                role="tab" aria-controls="nav-solution" aria-selected="true">
+                Solution
+                </buton>
+              </li>
+              <li class="nav-item px-3 note1"><buton class="nav-link textpep" id="nav-calculator-tab" data-bs-toggle="tab" data-bs-target="#nav-calculator" type="button"
+                role="tab" aria-controls="nav-calculator" aria-selected="false">
+                Calculator
+                </buton>
+              </li>
+              <li class="nav-item px-3 note1"><buton class="nav-link textpep" id="nav-graph-tab" data-bs-toggle="tab" data-bs-target="#nav-graph" type="button"
+                role="tab" aria-controls="nav-graph" aria-selected="false">
+                Graphs
+                </buton>
+              </li>
+              <li class="nav-item px-3 note1"><button class="nav-link textpep" id="nav-full-solution-tab" data-bs-toggle="tab" data-bs-target="#nav-full-solution" type="button"
+                role="tab" aria-controls="nav-full-solution" aria-selected="false">
+                Full Solution
+                </buton>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <div class="tab-content note1" id="nav-tabContent" style="margin-top: 14%;">
+        <div class="tab-pane fade show active" id="nav-solution" role="tabpanel"
+        aria-labelledby="nav-solution-tab">
+          <section>
+            <div class="note1 container-md">
+              <p>
+                <div class="fw-bolder" id="m1"> Inputed equation:</div>
+                <div id="coeff"></div>
+                <div class="fw-bolder" id="m2"> The General solution:</div>
+                <div id="coeff1"></div>
+                <div class="fw-bolder" id="m3"> Where:</div>
+                <div id="m4">\(C_1\) and \(C_2\) are constants</div>
+              </p>
+              <p class="mt-lg-5 mt-3">
+                <div>
+                  <div class="we p note11 mb-3" id="we1">
+                    <div id="pn"></div>
+                    <div class="note12" id="a"></div>
+                    <div id="p"></div>
+                  </div>
+                  <div id="p0">\(P_0(x)\ =\ 1\)</div>
+                  <div id="p11">\(P_1(x)\ =\ x\)</div>
+                </div>
+  
+              </p>
+              <p>
+                <div style="line-height: 1.8;">
+                  <div class="we p note11 mb-3" id="we2">
+                    <div id="qn"></div>
+                    <div class="note12" id="a2"></div>
+                    <div id="p2"></div>
+                    <div id="t">\(\ tanh^{-1}(x)\ -\ \)</div>
+                    <div class="note12" id="q"></div>
+                  </div>
+                  <div id="q0">\(Q_0(x)\ =\ tanh^{-1}(x)\)</div>
+                  <div id="q1">\(Q_1(x)\ =\ xtanh^{-1}(x)\ -\ 1\)</div>
+                </div>
+              </p>
+              
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade pt-4" id="nav-calculator" role="tabpanel"
+        aria-labelledby="nav-calculator-tab">
+          <section class="container-lg justify-content-center text-center">
+            <p class="" id="compute">
+              Insert the value of x to compute for the values of <span class="cofp4"></span> and <span class="cofq4"></span>.
+              <span style="color: red">Note that x must be in the range \(\ -1\lt x\lt1\).</span>
+              <div>
+                <div style="align-content: center; display: inline; align-items: center; align-self: center; text-align: center; border-spacing: 0ch;">
+                  <input type="number" id="input2" placeholder="Enter the value of x (-1 < x < 1)">
+                  <button class="btn bgpupp textpep" id="btn--compute" >Compute</button>
+                </div>
+                <div style="text-align: left; margin-top: 10%;">
+                  <div id="p22"></div>
+                  <br><br>
+                  <div id="q22"></div>
+                </div>
+              </div>
+            </p>
+          </section>
+        </div>
+        <div class="tab-pane fade" id="nav-graph" role="tabpanel"
+        aria-labelledby="nav-graph-tab">
+          <section>
+            <div class="justify-content-center container-lg align-items-center">
+              <div class="table-responsive container stytab">
+                <div class="my-5" id="p_graph"></div>
+              </div>
+              <div class="table-responsive container stytab">
+                <div class="my-5" id="q_graph"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade" id="nav-full-solution" role="tabpanel"
+        aria-labelledby="nav-full-solution-tab">
+          <section>
+            <div class="note1 container-lg" id="pdf">
+              <p id="add">
+                <div class="fw-bolder" id="m1"> Inputed equation:</div>
+                <div id="coeff01"></div>
+                <div class="fw-bolder" id="m2"> The General solution:</div>
+                <div id="coeff101"></div>
+                <div class="fw-bolder" id="m3"> Where:</div>
+                <div id="m41">\(C_1\) and \(C_2\) are constants</div>
+              </p>
+              <p class="mt-lg-5 mt-3">
+                <div id="pic1">
+                  <div class="we p note11 mb-3" id="we3">
+                    <div id="pn1"></div>
+                    <div class="note12" id="a1"></div>
+                    <div id="p1"></div>
+                  </div>
+                  <div id="p01">\(P_0(x)\ =\ 1\)</div>
+                  <div id="p111">\(P_1(x)\ =\ x\)</div>
+                </div>
+                <div class="table-responsive container stytab">
+                  <div class="my-5" style="min-width: 30rem" id="p_graph1"></div>
+                </div>
+              </p>
+              <p>
+                <div id="pic2" style="line-height: 1.8;">
+                  <div class="we p note11 mb-3" id="we4">
+                    <div id="qn1"></div>
+                    <div class="note12" id="a21"></div>
+                    <div id="p21"></div>
+                    <div id="t1">\(\ tanh^{-1}(x)\ -\ \)</div>
+                    <div class="note12" id="q101"></div>
+                  </div>
+                  <div id="q01">\(Q_0(x)\ =\ tanh^{-1}(x)\)</div>
+                  <div id="q11">\(Q_1(x)\ =\ xtanh^{-1}(x)\ -\ 1\)</div>
+                </div>
+                <div class="table-responsive container stytab">
+                  <div class="mt-5" style="min-width: 30rem;" id="q_graph1"></div>
+                </div> 
+              </p>
+
+              <div class="justify-content-center text-center my-5 align-items-center">
+                <button class="btn bgpupp textpep" id="download" data-bs-toggle="modal" data-bs-target="#reg-modal1">Download PDF</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+   
+      <!-- side panel / offcanvas -->
+      <div class="offcanvas offcanvas-end note1" tabindex="-1" id="sidebar" style="max-height: 45%;" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header text-muted">
+          <h5 class="offcanvas-title" id="sidebar-label"><i class="bi bi-calculator"></i>
+            UltimateCalc</h5>
+          <button type="button" class="btn-close text-primary fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body nav-pills justify-content-end align-center">
+          <ul class="navbar-nav nav-pills text-dark fw-bold">
+            <li class="nav-item active">
+              <a class="hoverr nav-link px-3" href="#" id="test1">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="hoverr nav-link px-3" href="#" id="dpdf1">Download Solution</a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="hoverr nav-link px-3" href="#" id="rate1"> Rate us</a>
+            </li>
+            <ul style="display: flex; justify-content: space-around; font-size: 25px;" id="icons1">
+              <li class="p-2 nav-link"><a href="https://www.linkedin.com/in/innocent-obasi-72ab6022a" target="_blank" class="bi bi-linkedin"></a></li>
+              <li class="p-2 nav-link"><a href="https://www.facebook.com/obasi.chukwuma.77" target="_blank" class="bi bi-facebook"></a></li>
+              <li class="p-2 nav-link"><a href="https://wa.link/fjkcmd" target="_blank" class="bi bi-whatsapp"></a></li>
+            </ul>
+          </ul>
+          </ul>
+        </div>
+      </div>
+  
+  
+  
+      <!-- modal itself -->
+      <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title color1" id="modal-title">Rate your experience</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="b3">
+                <div class="pb-2 text-center fs-3">
+                  <button style="background-color: transparent; border: none;"><i class="bi bi-star text-altdark px-2" id="rater1"></i></button>
+                  <button style="background-color: transparent; border: none;"><i class="bi bi-star text-altdark px-2" id="rater2"></i></button>
+                  <button style="background-color: transparent; border: none;"><i class="bi bi-star text-altdark px-2" id="rater3"></i></button>
+                  <button style="background-color: transparent; border: none;"><i class="bi bi-star text-altdark px-2" id="rater4"></i></button>
+                  <button style="background-color: transparent; border: none;"><i class="bi bi-star text-altdark px-2" id="rater5"></i></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="sub" class="btn bgpupp textpep">Submit</button>
+                </div>
+              </div>
+              <div class="modal-body" id="b4">
+                <h5 class="text-center note1 text-dark display-1 fw-bold"> Thank you for your contribution.</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="modal fade" id="reg-modal1" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title color1" id="modal-title">Download Solution as PDF</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="b1">
+              <p> Do you wish to print in portrait or in landscape.</p>
+            </div>
+            <div class="modal-footer text-center justify-content-center align-items-center">
+              <button onclick="alert1()"  type="button" class="btn bgpupp textpep">Portrait</button>
+              <button onclick="alert2()" type="button" class="btn bgpupp textpep">Landscape</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <!-- navbar -->
+  
+
+  
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="solution.js"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+    document.getElementById('load').style.display='none';
+    document.getElementById('b4').style.display='none'
+    document.getElementById('rate1').addEventListener('click', function(){
+      document.getElementById('rate').click()
+    })
+    document.getElementById('sub').addEventListener('click', function(){
+      document.getElementById('b3').style.display='none';
+      document.getElementById('b4').style.display='block'
+    })
+
+    document.getElementById('test').addEventListener('click', function(){
+      open('index.html','_self');
+    })
+    document.getElementById('test1').addEventListener('click', function(){
+      open('index.html','_self');
+    })
+    window.addEventListener('load', hide)
+    for (let i = 1; i<=5; i++) {
+      document.getElementById('rater'+i).addEventListener('click', function(){
+        for (let k = 1; k <=i; k++) {
+          document.getElementById('rater'+k).style.background='purple'
+        }
+      })
+      
+    }
+    document.getElementById('dpdf').addEventListener('click', function(){
+      document.getElementById('download').click()
+    })
+    document.getElementById('dpdf1').addEventListener('click', function(){
+      document.getElementById('download').click()
+    })
+
+    function alert1(){
+      alert('It will be downloaded to your download directory. Check for confirmation.');
+      opt['jsPDF']['orientation']='portrait';
+      finish();
+      document.getElementById('rate').click()
+    }
+    function alert2(){
+      alert('It will be downloaded to your download directory. Check for confirmation.');
+      finish();
+      document.getElementById('rate').click()
+    }
+    function finish() {
+      html2pdf().from(element).set(opt).toPdf().get('pdf').then(function (pdf) {
+          var totalPages = pdf.internal.getNumberOfPages();
+          for (i = 1; i <= totalPages; i++) {
+              pdf.setPage(i);
+              pdf.setFontSize(12);
+              pdf.setTextColor(151);
+              pdf.text(0.4, pdf.internal.pageSize.getHeight() - 0.5, "LEGENDRE CALCULATOR | Copyright 2023 | Designer: INNOCENT OBASI");
+              pdf.addImage("pic.jpg", 'JPEG', pdf.internal.pageSize.getWidth() - 1.1, pdf.internal.pageSize.getHeight() - 1, 0.65, 0.8);
+              pdf.text('Page ' + i + ' of ' + totalPages, pdf.internal.pageSize.getWidth() - 1.4, 0.5);
+          } 
+      }).save();
+    }
+    function hide(){
+      document.getElementById('not').style.display='none'
+      document.getElementById('load').style.display='block'
+    }
+  </script>
+</body>
+</html>

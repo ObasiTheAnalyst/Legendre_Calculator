@@ -1,0 +1,643 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendre Equation Calculator</title>
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font/bootstrap-icons.css">
+  <link rel="stylesheet" href="unique.css">
+  <noscript><link rel="stylesheet" href="noscript.css" /></noscript>
+  <script id="Mathjax-js" sync src="tex-chtml-full.js"></script>
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="wrapper" class="fade-in">
+    
+    <!--tabs-->
+    <div class="container-lg my-2" style="padding-bottom: 0%;">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light pt-0.5 pb-0.5 navbar-dark rounded-pill bgcon">
+        <div class="container-xxl">
+          <!-- navbar brand / title -->
+          <a class="navbar-brand" href="#intro">
+            <span class="text-secondary fw-bold motion1" id="intro11">
+              <i class="bi bi-calculator"></i>
+              UltimateCalc
+            </span>
+          </a>
+          <!-- toggle button for mobile nav -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" role="button" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-three-dots-vertical textpop px-3 py-1" style="font-size: 20px; background: black; border-radius: 30%; font-weight: 1000;"></span>
+          </button>
+    
+          <!-- navbar links -->
+          <div class="nav nav-pills collapse navbar-collapse justify-content-end align-center" id="nav-tab" role="tablist">
+            <ul class="navbar-nav">
+              <li class="nav-item px-3"><buton class="nav-link active textpop" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+              role="tab" aria-controls="nav-home" aria-selected="true">
+              Home
+              </buton>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link textpop" id="hiden1" href="#topics">Documentation</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link textpop" id="hiden2" href="#reviews">Reviews</a>
+              </li>
+              <li class="nav-item px-3"><button class="nav-link textpop" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button"
+                role="tab" aria-controls="nav-about" aria-selected="false">
+                About
+                </buton>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link textpop" id="hiden3" href="#contact">Contact us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link textpop" id="hiden8" href="#updates">Updates</a>
+              </li>
+              <ul style="display: flex; justify-content: space-around; font-size: 25px;" id="icons1">
+                <li class="p-2 nav-link"><a href="https://www.linkedin.com/in/innocent-obasi-72ab6022a" target="_blank" class="bi bi-linkedin"></a></li>
+                <li class="p-2 nav-link"><a href="https://www.facebook.com/obasi.chukwuma.77" target="_blank" class="bi bi-facebook"></a></li>
+                <li class="p-2 nav-link"><a href="https://wa.link/fjkcmd" target="_blank" class="bi bi-whatsapp"></a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+        aria-labelledby="nav-home-tab">
+              <!-- main image & intro text -->
+          <section id="intro"> 
+            <div class="container-lg">
+              <div class="row g-md-4 g-1 justify-content-around align-items-center">
+                <div class="col-lg-5 col-6 text-lg-start text-start">
+                  <h1>
+                    <div class="display-3 fw-bolder mb-md-3 mt-md-5 mt-1 mb-1 textpep" id="introh">The Ultimate Legendre Calculator</div>
+                    <div class="display-5 text-muted" id="introp1">Stupendous design of an innovative solution</div>
+                  </h1>
+                  <p class="lead my-lg-4" id="introp2">Introducing the simplest form of the ideal solution to the 
+                    Legendre equation</p>
+                  <a href="#" class="btn btn-lg-lg rounded-pill border-0" id="introp3" style="background: linear-gradient(to top right, purple 0%, rgb(0, 0, 12) 25%, rgb(7, 0, 0) 50%, rgb(0, 0, 12) 75%, purple 100%);"><span class="text-primary" id="start">Compute with Calculator</span></a>
+                  <a href="#projects" class="d-block mt-md-5 mt-1 text-muted motion1" id="introp4">
+                    Check out my other Projects
+                  </a>
+                </div>
+                <div class="col-md-5 col-3 text-center d-md-block">
+                  <!-- tooltip -->
+                  <span class="bi bi-calculator" id="calc" data-bs-placement="bottom" title="Calculator">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="calculate" class="container-md col-lg-8 bglight mt-lg-5 mt-1">
+            <div class="mt-0">
+              <article>
+                <div id="pa1">
+                  <header>
+                    <span class="date"> Smart calculator</span>
+                    <h2 style="text-transform: none; text-align: center; font-weight: 900;" class="fs-4"><a href="#input" class="eq1" style="color: rgb(48, 1, 48);">\((1-x^2)y''-2xy'+n(n+1)y=0\)
+                    </a>
+                    </h2>
+                    <p class="note1"> The above equation represents the legendre equation, the solution presented by this calculator
+                      consists of two terminating series \(P_n(x)\) and \(Q_n(x)\) as its fundamental solution; which makes it better than any other contemporary solution
+                    </p>
+                  </header>
+                  
+                  <h2><span class="note1 text-start text-muted"> Select the value of 'n':</span></h2>
+                  <p class="text-danger text-center note1">Note that n must be either zero or a positive integer</p>
+                  <div class="row g-0 note1 align-items-center justify-content-center">
+                    <input class="col-lg-4 col-6 text-center p-1" type="number" id="input" placeholder="Enter the value of n (1,2,3...)">
+                    <button class="btn btn-lg-lg textpep col-lg-2 col-3 note1" id="btn--select" >Select</button>
+                  </div>
+                </div>
+                <div id="pa2">
+                  <header>
+                    <span class="date"> Smart calculator</span>
+                    <h2 style="text-transform: none; text-align: center; font-weight: 900;" class="eq1"><a href="solution.html" target="_self" style="color: rgb(48, 1, 48);"><span id="coeff"></span>
+                    </a>
+                    </h2>
+                    <p> Is the above equation the intended equation?
+                    </p>
+                  </header>
+                  <h2>
+                    <div class="row text-center g-5 justify-content-center align-items-center">
+                      <button class="btn bgpupp textpep col-lg-1 col-2 mx-3" id="yes">yes</button>
+                      <button class="btn bgpupp textpep col-lg-1 col-2 mx-3" id="no">No</button>
+                    </div>
+                  </h2>
+                  </header>
+                </div>
+							</article>
+            </div>
+          </section>
+
+        
+          <section id="projects" class="bglight mt-5" style="border-radius: 10%;">
+            <div class="container-lg">
+              <div class="text-center">
+                <h2 class="fw-bolder">Other Projects</h2>
+                <p class="lead text-muted">Review the projects that interests you...</p>
+              </div>
+
+              <div class="row my-5 g-0 align-items-center justify-content-center">
+                <div class="col-8 col-lg-4 col-xl-3">
+                  <div class="card border-0" style="border-radius: 10%;">
+                    <div class="card-body text-center py-4">
+                      <h4 class="card-title color1">Mooring Analysis</h4>
+                      <p class="lead card-subtitle note1 mb-1">Estimating environmental loads</p>
+                      <img src="images (3).jpeg" class="img-fluid" alt="mooring analysis">
+                      <p class="card-text mx-5 text-muted d-none d-lg-block">Determining the maximum environmental load to move the anchor...</p>
+                      <a href="http//:obasitheanalyst.github.io/portfolio/" class="btn bgpupp textpep btn-lg-lg mt-3">
+                        view
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-9 col-lg-4">
+                  <div class="card border-primary border-2" style="border-radius: 10%;">
+                    <div class="card-header text-center text-primary">Most Popular</div>
+                    <div class="card-body text-center py-5">
+                      <h4 class="card-title color1">🎲 Roll 'n' Guess</h4>
+                      <p class="lead card-subtitle note1 mb-1">Test your guessing ability...</p>
+                      <img src="2022-09-20_01h28_31.png" class="img-fluid" alt="🎲">
+                      <p class="card-text mx-5 text-muted d-none d-lg-block">"... want to test your guessing ability? then be rest
+                        assured you are in the right place."</p>
+                      <a href="http//:obasitheanalyst.github.io/" class="btn bgpupp textpep btn-lg-lg mt-3">
+                        view
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-8 col-lg-4 col-xl-3">
+                  <div class="card border-0" style="border-radius: 10%;">
+                    <div class="card-body text-center py-4">
+                      <h4 class="card-title color1">Another Design of this Calculator</h4>
+                      <p class="lead card-subtitle note1 mb-1">The first design</p>
+                      <img src="/2022-09-20_01h30_11.png" class="img-fluid" alt="alternative calculator">
+                      <p class="card-text mx-5 text-muted d-none d-lg-block">This is the sequel to the current design..</p>
+                      <a href="http//:obasitheanalyst.github.io/" class="btn bgpupp textpep btn-lg-lg mt-3">
+                        view
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- end container -->
+          </section>
+
+          <!-- topics at a glance -->
+          <section id="topics">
+            <div class="container-md">
+              <div class="text-center">
+                <h2 class="textpop">Documentation...</h2>
+                <p class="lead text-muted">A quick glance at the innovative solution</p>
+              </div>
+              <div class="row my-5 g-5 justify-content-lg-around align-items-center">
+                <div class="col-6 col-lg-4 text-start">
+                  <!-- Header -->
+                  <header class="textpep py-3" id="logo">
+                    \((1-x^2)y''-2xy'+n(n+1)y=0
+                    \)
+                    <div class="left1">\( where\ n=1,2,3,...\)</div>
+                    <div>\(y=C_1\ P_n(x)+ C_2\ Q_n(x)\)</div>
+                    <div class="left1">\( where: \)</div>
+                    \(P_n(x)=\frac {1} {2^n}\sum_{r=0}^\frac {n} {2} \frac {(-1)^r\ (2n-2r)!} {(n-r)!\ (n-2r)!\ r!}x^{n-2r}\)
+                    <div class="my-2">
+                      <div>
+                        \(Q_n(x)=[P_n(x)]\ tanh^{-1}(x) \ \ \ \ \ +\)
+                      </div>
+                      <div>
+                        \(\frac {1} {2^n}\sum_{r=0}^\frac {n-1} {2} \ (-1)^{r+1}\)<span id="brac1">\(\sum_{k=0}^r \frac {(2n-2k)!\ (2k)!}{((n-k)!\ k!)^2}\)</span>\(\frac {(n-1-r)!\ r!}{(2r+1)!\ (n-1-2r)!}x^{n-1-2r}\)
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <div class="col-lg-6">
+                  
+                  <!-- accordion -->
+                  <div class="accordion note1" id="chapters">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading-1">
+                        <button class="accordion-button bglite" style="font-weight: 700; text-align: center; color: rgb(63, 2, 63); background: rgb(240, 176, 240);" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                          Overview
+                        </button>
+                      </h2>
+                      <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
+                        <div class="accordion-body note1 justify-content-center">
+                          <p>The Legendre equation arises in mathematical models of heat conduction in spherical geometries and expansion of electromagnetic potential. It is encountered in situations where one has to solve partial differential equations containing the Laplacian polar coordinates.This Calculator presents the simplest form of the Legendre function of the second kind, \(Q_n(x)\). Before now, it had been presented in form of a recursion formula. The Legendre equation can be written as:</p>
+                          <div class="text-center mb-2">\((1-x^2)y''-2xy'+n(n+1)y=0\)</div>
+                          <div>\( where\ n=1,2,3,...\)</div>
+                          <p style="margin-top: 3%; margin-bottom:0%;">
+                            The general solution is given in the form of Legendre functions of the first and second kind (\(P_n(x)\) and \(Q_n(x)\)), it can be written as:
+                          </p>
+                          <div class="text-center">\(y=C_1\ P_n(x)+ C_2\ Q_n(x)\)</div>
+                          <p>\(P_n (x)\) and  \(Q_n (x)\) are the two fundamental solutions, and both of which converge for \(-1\lt x\lt1\).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading-2">
+                        <button class="accordion-button collapsed bglite" style="font-weight: 700; text-align: center; color: rgb(63, 2, 63); background: rgb(240, 176, 240);" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                          Legendre function of the first kind, \(\ P_n(x)\)
+                        </button>
+                      </h2>
+                      <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters">
+                        <div class="accordion-body note1 justify-content-center">
+                          <p>
+                            \(P_n (x)\) is also referred to as Legendre polynomial. 
+                          </p>
+                          <div class="text-center">
+                            \(P_n(x)=\frac {1} {2^n}\sum_{r=0}^\frac {n} {2} \frac {(-1)^r\ (2n-2r)!} {(n-r)!\ (n-2r)!\ r!}x^{n-2r}\)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading-3">
+                        <button class="accordion-button collapsed bglite" style="font-weight: 700; text-align: center; color: rgb(63, 2, 63); background: rgb(240, 176, 240);" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-1">
+                          Legendre function of the second kind, \(\ Q_n(x)\)
+                        </button>
+                      </h2>
+                      <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                        <div class="accordion-body note1 justify-content-center">
+                          <div class="text-center mb-2">
+                            \(Q_n(x)=[P_n(x)]\ tanh^{-1}(x) \ \ \ \ \ +\)
+                          </div>
+                          <div class="text-center mb-2">
+                            \(\frac {1} {2^n}\sum_{r=0}^\frac {n-1} {2} \ (-1)^{r+1}\)<span id="brac1">\(\sum_{k=0}^r \frac {(2n-2k)!\ (2k)!}{((n-k)!\ k!)^2}\)</span>\(\frac {(n-1-r)!\ r!}{(2r+1)!\ (n-1-2r)!}x^{n-1-2r}\)
+                          </div>
+                          <p>
+                            The above equation (Obasi, 2022) is analogous to the recursion formula (Campbell, 2020) given by the French mathematician Pierre Ossian Bonnet, however, this equation which was developed by the author, will undoubtedly prove to be more direct; especially when trying to determine the solution to a Legendre equation with a high value of n. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading-4">
+                        <button class="accordion-button collapsed bglite" style="font-weight: 700; text-align: center; color: rgb(63, 2, 63); background: rgb(240, 176, 240);" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
+                          References
+                        </button>
+                      </h2>
+                      <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters">
+                        <div class="accordion-body note1 justify-content-center">
+                          <ol>
+                            <li class="py-2"> Obasi, I. C. (2022). The Ideal Solution to the Legendre Equation and Laplace Equation. (Undergoing review)</li>
+                            <li class="py-2">Campbell, J. (2020). New families of double hypergeometric series for constants involving 1/π^2 .  hal-02986446</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- reviews list -->
+          <section id="reviews">
+            <div class="container-lg">
+              <div class="text-center">
+                <h2 class="textpop"><i class="bi bi-stars textpop"></i>Reviews</h2>
+                <p class="lead text-muted">Reviews from scholars...</p>
+              </div>
+
+              <div class="row justify-content-center my-5 note1"  style="border-radius: 10%">
+                <div class="col-lg-8">
+                  <div class="list-group">
+                    <div class="list-group-item py-3">
+                      <div class="pb-2">
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                      </div>
+                      <h5 class="mb-1">Handful to students and researchers.</h5>
+                      <p class="mb-1">The design is really impressive. It will be helpful to students and researchers studying mathematics.</p>
+                      <small class="textpop">Anonymous review</small>
+                    </div>
+                    <div class="list-group-item py-3">
+                      <div class="pb-2">
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                      </div>
+                      <h5 class="mb-1">Nice</h5>
+                      <p class="mb-1">Wow impressive, this is good work.</p>
+                      <small class="textpop">Anonymous review from a professor</small>
+                    </div>
+                    <div class="list-group-item py-3">
+                      <div class="pb-2">
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-fill text-altdark"></i>
+                        <i class="bi bi-star-half text-altdark"></i>
+                      </div>
+                      <h5 class="mb-1">I am impressed</h5>
+                      <p class="mb-1"> I am impressed with all your projects that I have seen so far.</p>
+                      <small class="textpop">Anonymous review</small>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab1">
+          <section id="about">
+            <div class="container-md col-lg-6 justify-content-center bglight mt-5 p-5" style="border-radius: 10%;">
+              <header>
+                <span class="date">About me</span>
+                <h1 style="text-transform:capitalize;" class="color1 display3">Innocent Chukwuma Obasi<br />
+                </h1>
+                <img class="styleimg" src="IMG-20211001-WA0003.jpg">
+                <p>A Quick learner and innovative 
+                  thinker with over five years of hands-on engineering training and learning. Highly skilled in research and numerical modelling of engineering systems. Provides strategic leadership and facilitate tutoring; able to work as a team member or independently. A thorough analyst when it comes to transforming conflicting data into a more comprehendible and enjoyable form.</p>
+              </header>
+              <ul class="nav justify-content-center my-3">
+                <li><a href="Innocent Obasi CV.pdf" download="" class="btn bgpupp textpep"><i class="bi bi-download">Download resume</i></a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- contact form -->
+    <!-- form-control, form-label, form-select, input-group, input-group-text -->
+    <section id="contact">
+      <div class="container-lg">
+        
+        <div class="text-center">
+          <h2 class="textpop">Get in Touch</h2>
+          <p class="lead text-muted">Questions to ask? Fill out the form to contact me directly...</p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            
+            <form action="mailto:obasiinno99@gmail.com"
+							method="post" 
+							enctype="multipart/form-data"
+							name="EmailForm">
+              <label for="email" class="form-label textpop">Email address:</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill text-secondary"></i>
+                </span>
+                <input type="text" id="email" class="form-control" placeholder="e.g. kelly@gmail.com" />
+                <!-- tooltip -->
+                <span class="input-group-text textpop">
+                  <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
+              </div>
+              <label for="name" class="form-label textpop">Name:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill text-secondary"></i>
+                </span>
+                <input type="text" id="name" class="form-control" placeholder="e.g. Kenny" />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory really...">
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
+              </div>
+              <label for="subject" class="form-label textpop">What is the mail like?</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+                </span>
+                <select class="form-select" id="subject">
+                  <option value="Contribution" selected>Contribution</option>
+                  <option value="Support">Support</option>
+                  <option value="Questions">Questions</option>
+                </select>
+              </div>
+              <div class="mb-4 mt-5 form-floating">
+                <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+                <label for="query">Your query...</label>
+              </div>
+              <div class="mb-4 text-center">
+                <button type="submit" class="btn btn-secondary textpep bgpupp">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- get updates / modal trigger -->
+    <section id="updates" class="note1 bglight container-lg col-lg-6" style="border-radius: 15%;">
+      <div>
+        <div class="text-center">
+          <h2 class="color1">Get Updates</h2>
+          <p class="lead">Get the latest updates on various projects...</p>
+        </div>
+        <div class="row justify-content-center" >
+          <div class="text-center">
+            <p class="text-muted my-4 mx-lg-2">We are on a journey to make life in mathematics easier for students, researchers, scientists, engineers etc. We will be providing innovative calculator designs on the various aspects of mathematics. Register to be alerted on the latest addition; it is no under-statement to tell you that this calculator will surpass your expectations.</p>
+            <button class="btn bgpupp textpep" data-bs-toggle="modal" data-bs-target="#reg-modal">
+              Register to get updates
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal itself -->
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title color1" id="modal-title">Get the Latest Updates</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="b1">
+            <p> Please enter below your email address.</p>
+            <label for="modal-email" class="form-label color1">Email address:</label>
+            <input type="text" class="form-control" id="modal-email" placeholder="e.g. kelly@gmail.com">
+          </div>
+          <div class="modal-body" id="b2">
+            <h5 class="text-center note1 text-dark display-1 fw-bold"> Thank you for suscribing to our news letter.</h5>
+          </div>
+          <div class="modal-footer">
+            <button id="submit" type="button" class="btn bgpupp textpep">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row note1 align-items-center my-4 textpop" style="background: transparent;">
+      <ul class="text-center nav justify-content-center"><li class="nav-item px-1">&copy; 2023</li><li class="nav-item px-1">Designer: <a href="https://obasitheanalyst.github.io/portfolio/">Innocent Obasi</a></li></ul>
+    </div>
+
+    <!-- side panel / offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+      <div class="offcanvas-header text-muted">
+        <h5 class="offcanvas-title" id="sidebar-label"><i class="bi bi-calculator"></i>
+          UltimateCalc</h5>
+        <button type="button" class="btn-close text-primary fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body nav-pills justify-content-end align-center">
+        <ul class="navbar-nav text-dark fw-bold">
+          <li class="nav-item"><button class="nav-link px-3 active" id="nav-home-tab1" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">
+          Home
+          </buton>
+          </li>
+          <li class="nav-item ">
+            <a class="hoverr nav-link  px-3" id="hiden4" href="#topics">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="hoverr nav-link  px-3" id="hiden5" href="#reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link  px-3" id="nav-about-tab1" data-bs-toggle="tab" data-bs-target="#nav-about" type="button"
+              role="tab" aria-controls="nav-about" aria-selected="false">
+              About
+            </buton>
+          </li>
+          <li class="nav-item">
+            <a class="hoverr nav-link  px-3" id="hiden6" href="#contact">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="hoverr nav-link  px-3" id="hiden7" href="#updates">Updates</a>
+          </li>
+          <ul style="display: flex; justify-content: space-around; font-size: 30px; margin-top: 10%; margin-bottom: 5%;" id="icons2">
+            <li class="p-2 nav-link"><a href="https://www.linkedin.com/in/innocent-obasi-72ab6022a" target="_blank" class="bi bi-linkedin" id="icons21"></a></li>
+            <li class="p-2 nav-link"><a href="https://www.facebook.com/obasi.chukwuma.77" target="_blank" class="bi bi-facebook" id="icons22"></a></li>
+            <li class="p-2 nav-link"><a href="https://wa.link/fjkcmd" target="_blank" class="bi bi-whatsapp" id="icons23"></a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="jquery.scrollex.min.js"></script>
+  <script src="jquery.scrolly.min.js"></script>
+  <script src="breakpoints.min.js"></script>
+  <script src="browser.min.js"></script>
+  <script src="util.js"></script>
+  <script src="main.js"></script>
+  <script>
+    var n
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+    const tooltips1 = document.querySelectorAll('#calc')
+    tooltips1.forEach(r => {
+      new bootstrap.Tooltip(r)
+    })
+
+    document.querySelector('#pa2').style.display='none'
+    document.getElementById('b2').style.display='none'
+    document.getElementById('nav-about-tab').addEventListener('click', function(){
+      about();
+    })
+    document.getElementById('nav-home-tab').addEventListener('click', function(){
+      home();
+    })
+    document.getElementById('nav-about-tab1').addEventListener('click', function(){
+      document.getElementById('nav-about-tab').click();
+    })
+    document.getElementById('nav-home-tab1').addEventListener('click', function(){
+      document.getElementById('nav-home-tab').click();
+    })
+
+
+    function about(){
+      for (let i = 1; i <= 8; i++) {
+        document.querySelector('#hiden'+i).style.display= 'none';
+      }
+      document.getElementById('nav-home-tab1').classList.remove('active');
+      document.getElementById('nav-about-tab1').classList.add('active');
+      document.getElementById('nav-home-tab').classList.remove('active');
+      document.getElementById('nav-about-tab').classList.add('active');
+      open('#about','_self')
+    }
+
+    function home(){
+      for (let i = 1; i <= 8; i++) {
+        document.querySelector('#hiden'+i).style.display= 'block';
+      }
+      document.getElementById('nav-about-tab1').classList.remove('active');
+      document.getElementById('nav-home-tab1').classList.add('active');
+      document.getElementById('nav-about-tab').classList.remove('active');
+      document.getElementById('nav-home-tab').classList.add('active');
+      open('#intro','_self')
+    }
+    document.getElementById('btn--select').addEventListener('click',function(){
+      n=document.getElementById("input").value;
+      n=Number(n)
+      if(n>=0 && n<=85){
+        if (Number.isInteger(n)){
+          localStorage.setItem('n',n);
+          document.getElementById('pa1'). style.display='none'
+          document.getElementById('pa2'). style.display='block'
+          open("#calculate","_self");
+          
+          let promise = Promise.resolve();
+
+          function typeset(code) {
+            promise = promise.then(() => MathJax.typesetPromise(code()))
+                            .catch((err) => console.log('Typeset failed: ' + err.message));
+            return promise;
+          }
+
+          typeset(() => {
+              const math = document.querySelector('#coeff');
+              math.innerHTML = '\\((1-x^2)y\'\'-2xy\'+ '+n*(n+1)+'y=0\\)';
+              return [math];
+          });
+        } else {
+          alert("The input can only be either zero or a positive integer")
+        }
+      } else if(n<0){
+        alert("Error!! you inputed a negative integer. n must either be zero or a positive number.");
+      } else if(n>85){
+        alert("The input is too large. Input must be less than or equal to 85");
+      }
+  })
+
+  document.getElementById('yes').addEventListener('click',function(){
+    open("solution.html","_self")
+  })
+  document.getElementById('no').addEventListener('click',function(){
+    document.getElementById('p2'). style.display='none'
+    document.getElementById('p1'). style.display='block'
+  })
+  document.getElementById('submit').addEventListener('click',function(){
+    document.getElementById('b1').style.display='none'
+    document.querySelector('.modal-footer').style.display='none'
+    document.getElementById('b2').style.display='block'
+  })
+
+
+  </script>
+</body>
+</html>
